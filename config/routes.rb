@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   
+  get '/register', to: 'register#new'
+  post '/register', to: 'register#create'
+  
   namespace :admin do
       resources :users
   end
